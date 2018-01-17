@@ -1,0 +1,13 @@
+---
+applications:
+- name: ewalletpaymentR
+  host: ewalletpaymentR
+  memory: 256M
+  services:
+  - ewalletpayment-mongo-db
+  env:
+    NODE_ENV: cloud-foundry
+declared-services:
+  ewalletpayment-mongo-db:
+    label: compose-for-mongodb
+    plan: Standard
